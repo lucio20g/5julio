@@ -1,0 +1,203 @@
+/** FUENTE MONTSERRAT **/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, sans-serif;
+
+}
+
+body {
+
+    background-color: #000000;
+    height: 100vh;
+
+}
+
+.center {
+
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+}
+
+/* === SUB - NAVEGADOR === */
+
+.sub-header {
+
+    background: linear-gradient(to right, rgba(253, 21, 50), rgba(41, 52, 179));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+    box-shadow: 0 4px 10px -8px black;
+    margin-bottom: 5%;
+  
+}
+  
+.sub-header .sub-logo {
+  
+    cursor: pointer;
+  
+}
+  
+.sub-header .sub-logo img {
+  
+    height: 130px;
+    width: auto;
+    transition: all 0.3s;
+  
+}
+  
+.sub-header .sub-logo img:hover {
+  
+    transform: scale(1.2);
+  
+}
+  
+.sub-header .sub-nav-links {
+  
+    list-style: none;
+  
+}
+  
+.sub-header .sub-nav-links li {
+  
+    display: inline-block;
+    padding: 0 20px; 
+    transition: all 0.3s;   
+  
+}
+  
+.sub-header .sub-nav-links li:hover {
+  
+    transform: scale(1.1);
+  
+}
+  
+.sub-header .sub-nav-links a {
+
+    font-size: 13px;
+    color: #f2f2f2;
+    text-decoration: none;    
+    text-transform: uppercase;
+    transition: text-shadow ease; /* Transición para el efecto neon */
+    position: relative; /* Añadido para crear un efecto de neón */
+
+}
+
+.sub-header .sub-nav-links a:hover {
+
+    text-shadow: 0 0 10px rgba(253, 21, 50, 1); /* Efecto de neón */
+    color: rgba(253, 21, 50, 1);
+
+}
+  
+.sub-header .sub-btn button,
+.sub-header .menu button
+  
+{
+  
+    font-weight: 700;
+    color: #fff;
+    padding: 9px 25px;
+    background: rgba(253, 21, 50, 0.7);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  
+}
+  
+.sub-header .sub-btn button:hover,
+.sub-header .menu button:hover 
+  
+{
+  
+    background-color: rgba(41, 52, 179);
+    color: #fff;
+    transform: scale(1.1);
+  
+}
+  
+.sub-header a {
+  
+    text-decoration: none;  
+    /*borramos el que teniamos en .header .nav-links a*/ 
+    
+}
+    
+.sub-header .overlay {
+    
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 6;
+    left: 0;
+    top: 0;
+    background-color: rgba(101, 141, 234, .85);
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+    
+}
+    
+.sub-header .overlay .overlay-content {
+    
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    
+}
+    
+.sub-header .overlay a {
+    
+    padding: 15px;
+    font-size: 26px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    
+}
+    
+.sub-header .overlay a:hover, 
+.sub-header .overlay a:focus {
+    
+    color: #000000;
+    
+}
+    
+.sub-header .overlay .close {
+    
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
+    
+}
+  
+.menu {
+  
+    display: none;
+      
+}
+
+.hockey-container {
+
+    color: #f2f2f2;
+    text-align: center;
+    margin-bottom: 50px;
+
+}
