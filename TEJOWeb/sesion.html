@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
+
+    <!-- === VINCULACIÓN CON HOJA DE ÉSTILO ===-->
+
+    <link rel="stylesheet" type="text/css" href="CSS/index.css">
+    
+    <!-- === TÍTULO ===-->
+    
+    <title> Ingresar </title>
+
+</head>
+<body>
+
+    <div class="container-center-form">
+        <div class="container" id="container">
+            
+        <div class="form-container sign-in-container">
+            <form action="PHP/ingresar.php" method="POST">
+                <h1> Unirse </h1>
+            
+                <input type="text" placeholder="1° Jugador" name="primer_jugador" required/>
+                <input type="text" placeholder="2° Jugador" name="segundo_jugador" required/>
+                <button type="submit" name="submit"> Ingresar </button>
+    
+            </form>
+            
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-right">
+                    <h1> ¡Buenas!</h1>
+                    <p> Ingresa los datos para empezar con el juego </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>    
+    
+</body>
+</html>

@@ -1,6 +1,6 @@
 /** FUENTE MONTSERRAT **/
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
 /** ANIMACIÓN AL RECARGAR SITIO **/
 
@@ -84,6 +84,7 @@ nav img:hover {
     display: inline-block;
     padding: 8px 12px;
     position: relative;
+    transition: all ease-in-out 200ms;
 
 }
 
@@ -94,21 +95,9 @@ nav img:hover {
 
 }
 
-.nav-links ul li::after {
+.nav-links ul li:hover {
 
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: rgba(41, 52, 179);
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-
-}
-
-.nav-links ul li:hover::after {
-
-    width: 100%;
+    transform: scale(1.2);
 
 }
 
@@ -163,6 +152,230 @@ nav img:hover {
 nav .fa {
 
     display: none;
+
+}
+
+h1 {
+
+	font-weight: bold;
+	margin: 0;
+
+}
+
+h2 {
+	text-align: center;
+}
+
+p {
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 20px 0 30px;
+}
+
+span {
+
+	font-size: 12px;
+
+}
+
+a {
+
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
+
+}
+
+button {
+
+	border-radius: 20px;
+	border: 1px solid rgba(41, 52, 179);
+	background-color: rgba(41, 52, 179);
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+
+}
+
+button:active {
+
+	transform: scale(0.95);
+
+}
+
+button:focus {
+
+	outline: none;
+
+}
+
+button.ghost {
+
+	background-color: transparent;
+	border-color: #FFFFFF;
+
+}
+
+form {
+
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+	text-align: center;
+
+}
+
+input, select {
+	
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+	border-radius: 26px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.container {
+
+	background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 768px;
+	max-width: 100%;
+	min-height: 480px;
+
+}
+
+.form-container {
+
+	position: absolute;
+	top: 0;
+	height: 100%;
+	transition: all 0.6s ease-in-out;
+
+}
+
+.sign-in-container {
+
+	left: 0;
+	width: 50%;
+	z-index: 2;
+
+}
+
+.container-center-form {
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.container.right-panel-active .sign-in-container {
+
+	transform: translateX(100%);
+
+}
+
+.overlay-container {
+
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	transition: transform 0.6s ease-in-out;
+	z-index: 100;
+
+}
+
+.container.right-panel-active .overlay-container {
+
+	transform: translateX(-100%);
+
+}
+
+.overlay {
+
+	background: rgba(253, 21, 50, 0.9);
+	background: -webkit-linear-gradient(rgba(253, 21, 50, 0.9), rgba(41, 52, 179, 0.9));
+	background: linear-gradient( rgba(253, 21, 50, 0.9), rgba(41, 52, 179, 0.9));
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+	color: #FFFFFF;
+	position: relative;
+	left: -100%;
+	height: 100%;
+	width: 200%;
+  	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+
+}
+
+.container.right-panel-active .overlay {
+
+  	transform: translateX(50%);
+
+}
+
+.overlay-panel {
+
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+	top: 0;
+	height: 100%;
+	width: 50%;
+	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+
+}
+
+.overlay-left {
+
+	transform: translateX(-20%);
+
+}
+
+.container.right-panel-active .overlay-left {
+
+	transform: translateX(0);
+
+}
+
+.overlay-right {
+
+	right: 0;
+	transform: translateX(0);
+
+}
+
+.container.right-panel-active .overlay-right {
+
+	transform: translateX(20%);
 
 }
 
@@ -225,7 +438,6 @@ nav .fa {
     font-size: 13px;
     color: #f2f2f2;
     text-decoration: none;    
-    text-transform: uppercase;
     transition: text-shadow ease; /* Transición para el efecto neon */
     position: relative; /* Añadido para crear un efecto de neón */
 
@@ -246,7 +458,7 @@ nav .fa {
     font-weight: 700;
     color: #fff;
     padding: 9px 25px;
-    background: rgba(253, 21, 50, 0.7);
+    background: rgba(41, 52, 179);
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -259,7 +471,7 @@ nav .fa {
   
 {
   
-    background-color: rgba(41, 52, 179);
+    background-color: rgba(253, 21, 50, 0.7);
     color: #fff;
     transform: scale(1.1);
   
@@ -303,7 +515,6 @@ nav .fa {
     display: block;
     transition: all 0.3s ease 0s;
     font-weight: 700;
-    text-transform: uppercase;
     color: #fff;
     
 }
