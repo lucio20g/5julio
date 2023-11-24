@@ -23,6 +23,7 @@
 			<li> <a href="../index.html"> Inicio </a> </li>
 			<li> <a href="../comojugar.html"> Como jugar </a> </li>
 			<li> <a href="estadisticas.php"> Ver estadísticas </a> </li>
+      <a class="sub-btn" href="../juego.html"> <button> JUGAR </button> </a>
 	   </ul>            
 	</nav>
 
