@@ -100,9 +100,9 @@ function preload() {
   fondo2 = loadImage("IMÁGENES/win2.jpeg");
 
   select=2;
-  rgb=0;
+  rgb=255;
   if (select==2){
-    rgb=255;
+    rgb=0;
   }
 }
 
@@ -420,6 +420,10 @@ function images(){
   image(imgs[(select*4)+1],player2X-jugador1/2,player2Y-jugador1/2,jugador1,jugador1);
 }
 function punt(){
+  rgb=255;
+  if (select==2){
+    rgb=0;
+  }
   if (ballY>heightWindow*0.19 && ballY<heightWindow*0.81){
     if (ballX-(ball/2)<widthWindow*0.01 || ballX+(ball/2)>widthWindow-(widthWindow*0.01)){
       if (ballX-(ball/2)<widthWindow*0.01){
@@ -457,7 +461,7 @@ function punt(){
 }
 
 function menu(){
-  background(120);
+  background(0);
   if (mouseX>210 && mouseX<260 && mouseY>265 && mouseY<315){
     b1=color(204,255,0);
   }else{
