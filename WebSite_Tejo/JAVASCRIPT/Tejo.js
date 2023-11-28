@@ -100,10 +100,6 @@ function preload() {
   fondo2 = loadImage("win2.jpeg");
   
   select=2;
-  rgb=0;
-  if (select==2){
-    rgb=255;
-  }
 }
 
 
@@ -452,15 +448,15 @@ function punt(){
     z2=widthWindow
     punt1=0;
     punt2=0;
-    rgb=0;
-    if (select==2){
-      rgb=255;
-    }
   }
 }
 
 function menu(){
   background(0);
+  rgb=255;
+  if (select==2){
+    rgb=0;
+  }
   if (mouseX>210 && mouseX<260 && mouseY>265 && mouseY<315){
     b1=color(204,255,0);
   }else{
