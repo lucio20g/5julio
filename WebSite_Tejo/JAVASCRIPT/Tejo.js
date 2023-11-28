@@ -81,23 +81,23 @@ let select;
 
 
 function preload() {
-  soundGame = loadSound('SONIDOS/soundGame.mp3');
-  soundBall = loadSound('SONIDOS/soundBall.mp3');
+  soundGame = loadSound('soundGame.mp3');
+  soundBall = loadSound('soundBall.mp3');
   
-  imgs[0] = loadImage("IMÁGENES/mazo_azul.png");
-  imgs[1] = loadImage("IMÁGENES/mazo_rojo.png");
-  imgs[2] = loadImage("IMÁGENES/mesa_tejo3.png");
-  imgs[3] = loadImage("IMÁGENES/disco8.png");
-  imgs[4] = loadImage("IMÁGENES/mazo-set1.png");
-  imgs[5] = loadImage("IMÁGENES/mazo-set2.png");
-  imgs[6] = loadImage("IMÁGENES/mesadetejo.jpg");
-  imgs[7] = loadImage("IMÁGENES/disco3.png");
-  imgs[8] = loadImage("IMÁGENES/mazoazul.png");
-  imgs[9] = loadImage("IMÁGENES/mazorojo.png");
-  imgs[10] = loadImage("IMÁGENES/mesadetejo2.png");
-  imgs[11] = loadImage("IMÁGENES/disco1.png");
-  fondo = loadImage("IMÁGENES/win1.jpeg");
-  fondo2 = loadImage("IMÁGENES/win2.jpeg");
+  imgs[0] = loadImage("mazo_azul.png");
+  imgs[1] = loadImage("mazo_rojo.png");
+  imgs[2] = loadImage("mesa_tejo3.png");
+  imgs[3] = loadImage("disco8.png");
+  imgs[4] = loadImage("mazo-set1.png");
+  imgs[5] = loadImage("mazo-set2.png");
+  imgs[6] = loadImage("mesadetejo.jpg");
+  imgs[7] = loadImage("disco3.png");
+  imgs[8] = loadImage("mazoazul.png");
+  imgs[9] = loadImage("mazorojo.png");
+  imgs[10] = loadImage("mesadetejo2.png");
+  imgs[11] = loadImage("disco1.png");
+  fondo = loadImage("win1.jpeg");
+  fondo2 = loadImage("win2.jpeg");
   
   select=2;
   rgb=0;
@@ -452,12 +452,15 @@ function punt(){
     z2=widthWindow
     punt1=0;
     punt2=0;
-    select=2;
+    rgb=0;
+    if (select==2){
+      rgb=255;
+    }
   }
 }
 
 function menu(){
-  background(120);
+  background(0);
   if (mouseX>210 && mouseX<260 && mouseY>265 && mouseY<315){
     b1=color(204,255,0);
   }else{
