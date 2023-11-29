@@ -1,5 +1,5 @@
 //pantalla
-let widthWindow = 1376;
+let widthWindow = 1004;
 let heightWindow = widthWindow*0.399;
 //x e y jugador 1
 let player1X;
@@ -482,10 +482,10 @@ function menu(){
   }else{
     b3=color(255);
   }
-  image(imgs[(select*4)+2],280,130,800,800*0.399);
-  image(imgs[(select*4)+3],655,265,50,50);
-  image(imgs[(select*4)],500,265,50,50);
-  image(imgs[(select*4)+1],810,265,50,50);
+  image(imgs[(select*4)+2],204,94,584,584*0.399);
+  image(imgs[(select*4)+3],478,193,37,37);
+  image(imgs[(select*4)],365,193,37,37);
+  image(imgs[(select*4)+1],591,193,37,37);
   noStroke();
   fill(b1);
   rect(210,265,50,50,20,20);
@@ -495,7 +495,7 @@ function menu(){
   rect(620,470,120,50,50,50);
   fill(0);
   textSize(37);
-  text("Jugar!",630,510);
+  text("Jugar!",459,372);
   triangle(215,290,250,275,250,305);
   triangle(1145,290,1115,275,1115,305);
 }
