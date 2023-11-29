@@ -157,6 +157,7 @@ function movePlayers() {
     ac_conteoA++;
     player1X -= velocidadJugadores;
     botones_presionados_j1++;
+    ballMiddle();
     A = true;
   }else{
     A = false;
@@ -168,6 +169,7 @@ function movePlayers() {
     player1X += velocidadJugadores;
     ac_conteoD++;
     botones_presionados_j1++;
+    ballMiddle();
     D = true;
   }else{
     D = false;
@@ -201,6 +203,7 @@ function movePlayers() {
     player2X -= velocidadJugadores;
     ac_conteoLEFT++;
     botones_presionados_j2++;
+    ballMiddle();
     bt_LEFT = true;
   }else{
     bt_LEFT = false;
@@ -212,6 +215,7 @@ function movePlayers() {
     player2X += velocidadJugadores;
     ac_conteoRIGHT++;
     botones_presionados_j2++;
+    ballMiddle();
     bt_RIGHT = true;
   }else{
     bt_RIGHT = false;
@@ -433,6 +437,7 @@ function punt(){
         punt1 += 1;
         ballX = widthWindow*0.75;
       }
+      velocidadInicial = widthWindow/140;
       ballY = heightWindow/2;
       velocidadPelotaX = 0;
       velocidadPelotaY = 0;
@@ -514,4 +519,20 @@ function mouseClicked(){
       go=true;
     }
   }
+}
+
+function ballMiddle(){
+    let distPlayer1 = dist(player1X, player1Y, ballX, ballY);
+    let distPlayer2 = dist(player2X, player2Y, ballX, ballY);
+    let distPlayers = dist(player2X, player2Y, player1X, player1Y);
+    if(distPlayer1 <= widthWindow/28){
+      player1X -= velocidadJugadores
+    }
+    if(distPlayer2 <= ball){
+      player2X += velocidadJugadores
+    }
+    if(distPlayers <= jugador1+ball){
+      player1X -= velocidadJugadores
+      player2X += velocidadJugadores
+    }
 }
