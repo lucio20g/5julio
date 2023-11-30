@@ -43,7 +43,7 @@
         </tr>
       </thead>
       <?php 
-      $sql = "SELECT * FROM ganadores";
+      $sql = "SELECT * FROM `ganadores` ORDER BY `ganadores`.`Partidas_ganadas` DESC";
       $result = mysqli_query($conn, $sql);
       while($mostrar = mysqli_fetch_array($result)) { ?>
       <tbody>
